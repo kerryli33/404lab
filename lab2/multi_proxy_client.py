@@ -40,7 +40,7 @@ def main():
 	#print(addr_info)
 	for addr_tup in addr_info:
 		with Pool() as p:
-			#Pool determines the number of "workers" you ahve (?)
+			#Pool allows you to more of your comps resources more efficiency. Enables use of multiple cores
 			p.map(conn_socket, [addr_tup for _ in range(1,50)]) 
 			
 
